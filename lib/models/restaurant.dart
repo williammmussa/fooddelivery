@@ -6,7 +6,7 @@ class Restaurant {
   Food(
     name: 'Classic Cheeseburger',
     description: 'Juicy beef patty topped with cheddar cheese, lettuce, tomato, and pickles.',
-    imagePath: 'lib/assets/images/burger_classic.png',
+    imagePath: 'lib/assets/images/burgers/burger_classic.jpg',
     price: 6.99,
     category: FoodCategory.burgers,
     availableAddons: [
@@ -19,7 +19,7 @@ class Restaurant {
   Food(
     name: 'Double Beef Burger',
     description: 'Two flame-grilled beef patties with melted cheese and smoky house sauce.',
-    imagePath: 'lib/assets/images/burger_double.png',
+    imagePath: 'lib/assets/images/burgers/burger_double.jpg',
     price: 8.99,
     category: FoodCategory.burgers,
     availableAddons: [
@@ -32,7 +32,7 @@ class Restaurant {
   Food(
     name: 'BBQ Bacon Burger',
     description: 'Beef patty brushed with BBQ sauce, crispy bacon, and cheddar cheese.',
-    imagePath: 'lib/assets/images/burger_bbq.png',
+    imagePath: 'lib/assets/images/burgers/burger_bbq.jpg',
     price: 7.99,
     category: FoodCategory.burgers,
     availableAddons: [
@@ -45,7 +45,7 @@ class Restaurant {
   Food(
     name: 'Chicken Burger',
     description: 'Crispy chicken fillet with lettuce, mayo, and pickles.',
-    imagePath: 'lib/assets/images/burger_chicken.png',
+    imagePath: 'lib/assets/images/burgers/burger_chicken.jpg',
     price: 6.49,
     category: FoodCategory.burgers,
     availableAddons: [
@@ -58,7 +58,7 @@ class Restaurant {
   Food(
     name: 'Veggie Burger',
     description: 'Plant-based patty served with vegan cheese and fresh greens.',
-    imagePath: 'lib/assets/images/burger_veggie.png',
+    imagePath: 'lib/assets/images/burgers/burger_veggie.jpg',
     price: 5.99,
     category: FoodCategory.burgers,
     availableAddons: [
@@ -72,7 +72,7 @@ class Restaurant {
   Food(
     name: 'Chicken Wings',
     description: 'Crispy wings tossed in your choice of sauce.',
-    imagePath: 'lib/assets/images/chicken_wings.png',
+    imagePath: 'lib/assets/images/sides/chicken_wings.jpg',
     price: 7.99,
     category: FoodCategory.sides,
     availableAddons: [
@@ -85,7 +85,7 @@ class Restaurant {
   Food(
     name: 'French Fries',
     description: 'Golden fries seasoned with sea salt.',
-    imagePath: 'lib/assets/images/fries.png',
+    imagePath: 'lib/assets/images/sides/fries.jpg',
     price: 3.49,
     category: FoodCategory.sides,
     availableAddons: [
@@ -98,7 +98,7 @@ class Restaurant {
   Food(
     name: 'Mozzarella Sticks',
     description: 'Breaded mozzarella fried to perfection.',
-    imagePath: 'lib/assets/images/mozzarella_sticks.png',
+    imagePath: 'lib/assets/images/sides/mozzarella_sticks.jpg',
     price: 5.99,
     category: FoodCategory.sides,
     availableAddons: [
@@ -111,7 +111,7 @@ class Restaurant {
   Food(
     name: 'Garlic Bread',
     description: 'Toasted baguette brushed with garlic butter.',
-    imagePath: 'lib/assets/images/garlic_bread.png',
+    imagePath: 'lib/assets/images/sides/garlic_bread.jpg',
     price: 4.49,
     category: FoodCategory.sides,
     availableAddons: [
@@ -124,7 +124,7 @@ class Restaurant {
   Food(
     name: 'Onion Rings',
     description: 'Crispy battered onion rings.',
-    imagePath: 'lib/assets/images/onion_rings.png',
+    imagePath: 'lib/assets/images/sides/onion_rings.jpg',
     price: 4.99,
     category: FoodCategory.sides,
     availableAddons: [
@@ -138,7 +138,7 @@ class Restaurant {
   Food(
     name: 'Caesar Salad',
     description: 'Romaine lettuce tossed with Caesar dressing, parmesan and croutons.',
-    imagePath: 'lib/assets/images/salad_caesar.png',
+    imagePath: 'lib/assets/images/salads/salad_caesar.jpg',
     price: 7.99,
     category: FoodCategory.salads,
     availableAddons: [
@@ -151,7 +151,7 @@ class Restaurant {
   Food(
     name: 'Greek Salad',
     description: 'Crisp cucumbers, olives, tomato, onions and feta.',
-    imagePath: 'lib/assets/images/salad_greek.png',
+    imagePath: 'lib/assets/images/salads/salad_greek.jpg',
     price: 6.99,
     category: FoodCategory.salads,
     availableAddons: [
@@ -164,7 +164,7 @@ class Restaurant {
   Food(
     name: 'Garden Salad',
     description: 'Mixed greens with cucumbers, carrots and tomato.',
-    imagePath: 'lib/assets/images/salad_garden.png',
+    imagePath: 'lib/assets/images/salads/salad_garden.jpg',
     price: 5.49,
     category: FoodCategory.salads,
     availableAddons: [
@@ -177,7 +177,7 @@ class Restaurant {
   Food(
     name: 'Chicken Avocado Salad',
     description: 'Grilled chicken with avocado, cherry tomatoes and mixed greens.',
-    imagePath: 'lib/assets/images/salad_chicken_avocado.png',
+    imagePath: 'lib/assets/images/salads/salad_chicken_avocado.jpg',
     price: 8.99,
     category: FoodCategory.salads,
     availableAddons: [
@@ -190,7 +190,7 @@ class Restaurant {
   Food(
     name: 'Tuna Salad',
     description: 'Flaked tuna with mayo, celery and fresh greens.',
-    imagePath: 'lib/assets/images/salad_tuna.png',
+    imagePath: 'lib/assets/images/salads/salad_tuna.jpg',
     price: 7.49,
     category: FoodCategory.salads,
     availableAddons: [
@@ -204,7 +204,7 @@ class Restaurant {
   Food(
     name: 'Chocolate Cake',
     description: 'Moist chocolate cake with fudge icing.',
-    imagePath: 'lib/assets/images/cake_chocolate.png',
+    imagePath: 'lib/assets/images/desserts/cake_chocolate.jpg',
     price: 4.99,
     category: FoodCategory.desserts,
     availableAddons: [
@@ -217,7 +217,7 @@ class Restaurant {
   Food(
     name: 'Vanilla Ice Cream',
     description: 'Classic vanilla ice cream scoop.',
-    imagePath: 'lib/assets/images/ice_cream_vanilla.png',
+    imagePath: 'lib/assets/images/desserts/ice_cream_vanilla.jpg',
     price: 2.99,
     category: FoodCategory.desserts,
     availableAddons: [
@@ -230,7 +230,7 @@ class Restaurant {
   Food(
     name: 'Apple Pie',
     description: 'Warm apple pie with cinnamon crust.',
-    imagePath: 'lib/assets/images/apple_pie.png',
+    imagePath: 'lib/assets/images/desserts/apple_pie.jpg',
     price: 3.99,
     category: FoodCategory.desserts,
     availableAddons: [
@@ -241,9 +241,9 @@ class Restaurant {
   ),
 
   Food(
-    name: 'Cheesecake',
+    name: 'Cheese Cake',
     description: 'Smooth and creamy cheesecake with graham crust.',
-    imagePath: 'lib/assets/images/cheesecake.png',
+    imagePath: 'lib/assets/images/desserts/cheesecake.jpg',
     price: 5.49,
     category: FoodCategory.desserts,
     availableAddons: [
@@ -256,7 +256,7 @@ class Restaurant {
   Food(
     name: 'Brownie',
     description: 'Rich chocolate brownie served warm.',
-    imagePath: 'lib/assets/images/brownie.png',
+    imagePath: 'lib/assets/images/desserts/brownie.jpg',
     price: 3.49,
     category: FoodCategory.desserts,
     availableAddons: [
@@ -270,7 +270,7 @@ class Restaurant {
   Food(
     name: 'Coca-Cola',
     description: 'Chilled carbonated soft drink.',
-    imagePath: 'lib/assets/images/drink_cola.png',
+    imagePath: 'lib/assets/images/drinks/drink_cola.jpg',
     price: 1.99,
     category: FoodCategory.drinks,
     availableAddons: [],
@@ -279,7 +279,7 @@ class Restaurant {
   Food(
     name: 'Fresh Orange Juice',
     description: 'Cold pressed orange juice, no added sugar.',
-    imagePath: 'lib/assets/images/drink_orange.png',
+    imagePath: 'lib/assets/images/drinks/drink_orange.jpg',
     price: 2.99,
     category: FoodCategory.drinks,
     availableAddons: [
@@ -291,7 +291,7 @@ class Restaurant {
   Food(
     name: 'Iced Coffee',
     description: 'Brewed coffee served over ice.',
-    imagePath: 'lib/assets/images/drink_iced_coffee.png',
+    imagePath: 'lib/assets/images/drinks/drink_iced_coffee.jpg',
     price: 3.49,
     category: FoodCategory.drinks,
     availableAddons: [
@@ -304,7 +304,7 @@ class Restaurant {
   Food(
     name: 'Milkshake',
     description: 'Thick and creamy flavored milkshake.',
-    imagePath: 'lib/assets/images/drink_milkshake.png',
+    imagePath: 'lib/assets/images/drinks/drink_milkshake.jpg',
     price: 4.99,
     category: FoodCategory.drinks,
     availableAddons: [
@@ -317,7 +317,7 @@ class Restaurant {
   Food(
     name: 'Mineral Water',
     description: 'Pure still mineral water.',
-    imagePath: 'lib/assets/images/drink_water.png',
+    imagePath: 'lib/assets/images/drinks/drink_water.jpg',
     price: 1.49,
     category: FoodCategory.drinks,
     availableAddons: [],
