@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:fooddelivery/models/food.dart';
 
-class Restaurant {
+class Restaurant  extends ChangeNotifier {
   final List<Food> _menu = [
       // ------------------ BURGERS ------------------
   Food(
@@ -323,6 +324,34 @@ class Restaurant {
     availableAddons: [],
   ),
 
-
   ];
+
+
+  /*
+  getters
+  */
+  List<Food> get menu => _menu;
+
+  /*
+  operations
+  */
+  // add item to the cart
+
+  // remove item from the cart
+
+  // get total price of items in the cart
+
+  //get total number of items in the cart
+
+  //clear the cart
+
+  /*
+  helpers
+  */
+
+  //Generate the receipt for the order
+
+  //format a double value into money
+
+  //format list of addons into a string summary
 }

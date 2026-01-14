@@ -9,8 +9,8 @@ class MySliverAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       pinned: true,
-      expandedHeight: 340.0,
-      collapsedHeight: 120.0,
+      expandedHeight: 340,
+      collapsedHeight: 120,
       floating: false,
       actions: [
         IconButton(
@@ -37,6 +37,7 @@ class MySliverAppBar extends StatelessWidget {
          left:0,
          right: 0
       ),
+      expandedTitleScale: 1,
       ),
     );
   }
