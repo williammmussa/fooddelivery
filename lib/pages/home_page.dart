@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fooddelivery/components/my_current_location.dart';
 import 'package:fooddelivery/components/my_description_box.dart';
 import 'package:fooddelivery/components/my_drawer.dart';
+import 'package:fooddelivery/components/my_food_tile.dart';
 import 'package:fooddelivery/components/my_sliver_app_bar.dart';
 import 'package:fooddelivery/components/my_tab_bar.dart';
 import 'package:fooddelivery/models/food.dart';
 import 'package:fooddelivery/models/restaurant.dart';
+import 'package:fooddelivery/pages/food_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +23,10 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: FoodCategory.values.length, vsync: this);
+    _tabController = TabController(
+      length: FoodCategory.values.length,
+      vsync: this,
+    );
   }
 
   @override
@@ -32,37 +37,31 @@ class _HomePageState extends State<HomePage>
 
   //sort out and return a list of food items that belong to a specific category
   List<Food> _filterMenuByCategory(FoodCategory category, List<Food> fullMenu) {
-    return fullMenu
-        .where((food) => food.category == category)
-        .toList();
+    return fullMenu.where((food) => food.category == category).toList();
   }
 
   // return list of foods in a given category
   List<Widget> getFoodInThisCategory(List<Food> fullMenu) {
-     return FoodCategory.values.map((category) {
-       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu); 
-       return ListView.builder(
-         itemCount: categoryMenu.length,
-         physics: NeverScrollableScrollPhysics(),
-         itemBuilder: (context, index) {
-           Food foodItem = categoryMenu[index];
-           return ListTile(
-             title: Text(
-               foodItem.name,
-               style: TextStyle(
-                 color: Theme.of(context).colorScheme.inversePrimary,
-               ),
-             ),
-             subtitle: Text(
-               '\$${foodItem.price.toStringAsFixed(2)}',
-               style: TextStyle(
-                 color: Theme.of(context).colorScheme.inversePrimary,
-               ),
-             ),
-           );
-         },
-       );
-     } ).toList();
+    return FoodCategory.values.map((category) {
+      //for each category, get the list of food items that belong to that category
+      List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
+      return ListView.builder(
+        itemCount: categoryMenu.length,
+        physics: NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
+        itemBuilder: (context, index) {
+          //get individual food item
+          Food food = categoryMenu[index];
+          //return food tile UI component
+          return FoodTile(
+            food: food, 
+            onTap: () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => FoodPage(food: food),
+            )),
+            );
+        },
+      );
+    }).toList();
   }
 
   @override
@@ -90,11 +89,12 @@ class _HomePageState extends State<HomePage>
                 ),
               ),
             ],
-        body: Consumer<Restaurant>(builder : (context, restaurant, child) => 
-          TabBarView(
-            controller: _tabController,
-            children: getFoodInThisCategory(restaurant.menu),
-          ),
+        body: Consumer<Restaurant>(
+          builder:
+              (context, restaurant, child) => TabBarView(
+                controller: _tabController,
+                children: getFoodInThisCategory(restaurant.menu),
+              ),
         ),
       ),
     );
